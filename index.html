@@ -363,6 +363,35 @@
     .hero{padding-top:36px;}
     .row{grid-template-columns:1fr; gap:10px;}
   }
+
+  .faq{display:flex; flex-direction:column; gap:26px; margin-top:32px;}
+  .faq .q{
+    font-weight:600;
+    color:var(--text);
+    margin:0;
+  }
+  .faq .a{
+    color:var(--muted);
+    margin:6px 0 0;
+    max-width:58ch;
+  }
+  .reach{
+    margin-top:34px;
+    padding-top:26px;
+    border-top:1px solid var(--line);
+    display:flex;
+    align-items:baseline;
+    gap:10px;
+    flex-wrap:wrap;
+  }
+  .reach p{color:var(--muted); margin:0;}
+  .reach a{
+    color:var(--pulse);
+    font-weight:600;
+    text-decoration:none;
+    border-bottom:1px solid var(--pulse-dim);
+  }
+  .reach a:hover{border-bottom-color:var(--pulse);}
 </style>
 
 <div class="mark">
@@ -486,6 +515,38 @@
       <div><span class="k">$ analytics .............. </span><span class="v">none</span></div>
       <div><span class="k">$ page content read ...... </span><span class="v">none</span></div>
       <div><span class="k">$ settings stored in ..... </span><span class="v mute">chrome.storage.local (this device only)</span></div>
+    </div>
+  </div>
+</section>
+
+
+<section id="support">
+  <div class="wrap prose">
+    <p class="eyebrow"><span class="dot"></span>Support</p>
+    <h2 style="font-size:1.7rem; font-weight:500; font-style:italic; margin-top:14px;">Stuck on something?</h2>
+
+    <div class="faq">
+      <div>
+        <p class="q">&ldquo;Test now&rdquo; says no Teams tab was found, but I have one open.</p>
+        <p class="a">Refresh that Teams tab once after installing or reloading the extension. Chrome only injects the content script into tabs opened after that point.</p>
+      </div>
+      <div>
+        <p class="q">Which Teams URLs does this work on?</p>
+        <p class="a">teams.microsoft.com and teams.live.com &mdash; both work/school accounts and personal accounts.</p>
+      </div>
+      <div>
+        <p class="q">Does it read my messages or calls?</p>
+        <p class="a">No. It only dispatches a synthetic mouse/keyboard event on the page itself &mdash; nothing is read, logged, or sent anywhere.</p>
+      </div>
+      <div>
+        <p class="q">How do I turn it off?</p>
+        <p class="a">Open the popup and flip the toggle at the top. That's the entire control &mdash; no accounts, no settings to hunt for.</p>
+      </div>
+    </div>
+
+    <div class="reach">
+      <p>Something else?</p>
+      <a href="https://github.com/rifatwahid/ms-team-pulse-site/issues">Open an issue on GitHub &rarr;</a>
     </div>
   </div>
 </section>
